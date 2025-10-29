@@ -8,12 +8,12 @@ Many sections reference commands or links in their resources.
 ```
 # cks-master
 sudo -i
-bash <(curl -s https://raw.githubusercontent.com/killer-sh/cks-course-environment/master/cluster-setup/latest/install_master.sh)
+bash <(curl -s https://raw.githubusercontent.com/pshamus/cks-course-environment/master/cluster-setup/latest/install_master.sh)
 
 
 # cks-worker
 sudo -i
-bash <(curl -s https://raw.githubusercontent.com/killer-sh/cks-course-environment/master/cluster-setup/latest/install_worker.sh)
+bash <(curl -s https://raw.githubusercontent.com/pshamus/cks-course-environment/master/cluster-setup/latest/install_worker.sh)
 
 
 # run the printed kubeadm-join-command from the master on the worker
@@ -61,13 +61,13 @@ https://cloud.google.com/compute/docs/regions-zones
 # INSTALL cks-master
 gcloud compute ssh cks-master
 sudo -i
-bash <(curl -s https://raw.githubusercontent.com/killer-sh/cks-course-environment/master/cluster-setup/latest/install_master.sh)
+bash <(curl -s https://raw.githubusercontent.com/pshamus/cks-course-environment/master/cluster-setup/latest/install_master.sh)
 
 
 # INSTALL cks-worker
 gcloud compute ssh cks-worker
 sudo -i
-bash <(curl -s https://raw.githubusercontent.com/killer-sh/cks-course-environment/master/cluster-setup/latest/install_worker.sh)
+bash <(curl -s https://raw.githubusercontent.com/pshamus/cks-course-environment/master/cluster-setup/latest/install_worker.sh)
 ```
 
 ### Practice - Firewall rules for NodePorts
@@ -134,7 +134,7 @@ https://github.com/kubernetes/dashboard/blob/master/docs/user/access-control/REA
 ## Cluster Setup - Secure Ingress
 ```
 # Install NGINX Ingress
-kubectl apply -f https://raw.githubusercontent.com/killer-sh/cks-course-environment/master/course-content/cluster-setup/secure-ingress/nginx-ingress-controller.yaml
+kubectl apply -f https://raw.githubusercontent.com/pshamus/cks-course-environment/master/course-content/cluster-setup/secure-ingress/nginx-ingress-controller.yaml
 
 # Complete Example
 https://github.com/killer-sh/cks-course-environment/tree/master/course-content/cluster-setup/secure-ingress
@@ -289,10 +289,10 @@ https://kubernetes.io/docs/concepts/security/controlling-access
 
 ```
 # master
-bash <(curl -s https://raw.githubusercontent.com/killer-sh/cks-course-environment/master/cluster-setup/previous/install_master.sh)
+bash <(curl -s https://raw.githubusercontent.com/pshamus/cks-course-environment/master/cluster-setup/previous/install_master.sh)
 
 # worker
-bash <(curl -s https://raw.githubusercontent.com/killer-sh/cks-course-environment/master/cluster-setup/previous/install_worker.sh)
+bash <(curl -s https://raw.githubusercontent.com/pshamus/cks-course-environment/master/cluster-setup/previous/install_worker.sh)
 
 ---------------------------------------------------------------------------
 
@@ -404,7 +404,7 @@ https://github.com/killer-sh/cks-course-environment/blob/master/course-content/m
 ---------------------------------------------------------------------------
 
 # IF THE INSTALL SCRIPT FAILS then you can try to change the URL= further down in the script from latest to a specific release
-bash <(curl -s https://raw.githubusercontent.com/killer-sh/cks-course-environment/master/course-content/microservice-vulnerabilities/container-runtimes/gvisor/install_gvisor.sh)
+bash <(curl -s https://raw.githubusercontent.com/pshamus/cks-course-environment/master/course-content/microservice-vulnerabilities/container-runtimes/gvisor/install_gvisor.sh)
 
 # Example of Pod+RuntimeClass:
 https://github.com/killer-sh/cks-course-environment/blob/master/course-content/microservice-vulnerabilities/container-runtimes/gvisor/example.yaml
@@ -430,7 +430,7 @@ https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.29/#podsecurity
 ## Microservice Vulnerabilities - Open Policy Agent (OPA)
 
 ```
-kubectl create -f https://raw.githubusercontent.com/killer-sh/cks-course-environment/master/course-content/opa/gatekeeper.yaml
+kubectl create -f https://raw.githubusercontent.com/pshamus/cks-course-environment/master/course-content/opa/gatekeeper.yaml
 
 ---------------------------------------------------------------------------
 
@@ -499,7 +499,7 @@ docker run ghcr.io/aquasecurity/trivy:latest image nginx:latest
 ## Supply Chain Security - Secure Supply Chain
 ```
 # install opa
-kubectl create -f https://raw.githubusercontent.com/killer-sh/cks-course-environment/master/course-content/opa/gatekeeper.yaml
+kubectl create -f https://raw.githubusercontent.com/pshamus/cks-course-environment/master/course-content/opa/gatekeeper.yaml
 
 # opa resources
 https://github.com/killer-sh/cks-course-environment/tree/master/course-content/supply-chain-security/secure-the-supply-chain/whitelist-registries/opa
@@ -571,6 +571,6 @@ https://github.com/killer-sh/cks-course-environment/blob/master/course-content/s
 # syscalls
 https://www.youtube.com/watch?v=8g-NUUmCeGI
 
-# AppArmor, SELinux Introduction 
+# AppArmor, SELinux Introduction
 https://www.youtube.com/watch?v=JFjXvIwAeVI
 ```
